@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Wrapper = styled.article`
   background: var(--white);
@@ -53,6 +53,10 @@ const Wrapper = styled.article`
     color: #d66a6a;
     background: #ffeeee;
   }
+  .offer {
+    color: #66ffb2;
+    background: #00cc66;
+  }
   .content {
     padding: 1rem 1.5rem;
   }
@@ -100,6 +104,6 @@ const Wrapper = styled.article`
   &:hover .actions {
     visibility: visible;
   }
-`
+`;
 
-export default Wrapper
+export default Wrapper;
