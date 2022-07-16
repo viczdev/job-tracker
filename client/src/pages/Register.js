@@ -17,15 +17,8 @@ const Register = () => {
 
   const [values, setValues] = useState(initialState);
 
-  const {
-    user,
-    isLoading,
-    showAlert,
-    displayAlert,
-    registerUser,
-    loginUser,
-    setupUser,
-  } = useAppContext();
+  const { user, isLoading, showAlert, displayAlert, setupUser } =
+    useAppContext();
 
   if (user) {
     navigate("/");
