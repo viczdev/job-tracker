@@ -1,5 +1,6 @@
 import React from "react";
 import { JobContainer, SearchContainer } from "../../components";
+import { useAppContext } from "../../context/appContext";
 
 const AllJobs = () => {
   return (
