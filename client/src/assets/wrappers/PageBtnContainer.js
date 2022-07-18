@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Wrapper = styled.section`
   height: 6rem;
@@ -15,10 +15,10 @@ const Wrapper = styled.section`
   .pageBtn {
     background: transparent;
     border-color: transparent;
-    width: 50px;
-    height: 40px;
-    font-weight: 700;
-    font-size: 1.25rem;
+    width: 45px;
+    height: 35px;
+    font-weight: 600;
+    font-size: 1.2rem;
     color: var(--primary-500);
     transition: var(--transition);
     border-radius: var(--borderRadius);
@@ -50,5 +50,5 @@ const Wrapper = styled.section`
     background: var(--primary-500);
     color: var(--white);
   }
-`
-export default Wrapper
+`;
+export default Wrapper;
