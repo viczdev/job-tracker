@@ -4,9 +4,9 @@ import { useAppContext } from "../context/appContext";
 import {
   FaSuitcaseRolling,
   FaCalendarCheck,
-  FaBug,
   FaRegSmileBeam,
 } from "react-icons/fa";
+import { TbMoodSad } from "react-icons/tb";
 import Wrapper from "../assets/wrappers/StatsContainer";
 
 const StatsContainer = () => {
@@ -30,7 +30,7 @@ const StatsContainer = () => {
     {
       title: "Jobs Declined",
       count: stats.Declined || 0,
-      icon: <FaBug />,
+      icon: <TbMoodSad />,
       color: "#d66a6a",
       bcg: "#ffeeee",
     },
