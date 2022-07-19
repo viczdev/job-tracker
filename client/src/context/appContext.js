@@ -90,9 +90,7 @@ const AppProvider = ({ children }) => {
       return response;
     },
     (error) => {
-      console.log(error.response);
       if (error.response.status === 401) {
-        console.log("AUTH ERROR");
         logoutUser();
       }
       return Promise.reject(error);
@@ -235,7 +233,7 @@ const AppProvider = ({ children }) => {
         payload: { jobs, totalJobs, numOfPages },
       });
     } catch (error) {
-      console.log(error.response);
+      logoutUser();
     }
     clearAlert();
   };
