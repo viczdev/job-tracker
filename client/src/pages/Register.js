@@ -40,7 +40,7 @@ const Register = () => {
       return;
     }
     const currentUser = { name: name, email: email, password: password };
-    console.log(currentUser);
+
     if (isMember) {
       setupUser({
         currentUser,

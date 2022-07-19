@@ -1,6 +1,8 @@
 import { StatusCodes } from "http-status-codes";
 import { BadRequestError, UnAuthenticatedError } from "../errors/index.js";
 import User from "../models/User.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const register = async (req, res) => {
   const { name, email, password } = req.body;
@@ -63,4 +65,10 @@ const updateUser = async (req, res) => {
   res.status(StatusCodes.OK).json({ user, token, location: user.location });
 };
 
-export { register, login, updateUser };
+const getGuestAccount = async (req, res) => {
+  res
+    .status(StatusCodes.OK)
+    .json({ user: process.env.GUEST_ACCOUNT, pwd: process.env.GUEST_PWD });
+};
+
+export { register, login, updateUser, getGuestAccount };

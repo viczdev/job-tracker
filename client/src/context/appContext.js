@@ -153,6 +153,10 @@ const AppProvider = ({ children }) => {
   };
 
   const updateUser = async (currentUser) => {
+    if (currentUser.email === "guest@test.com") {
+      console.log("Please do not modify the Guest Account");
+      return;
+    }
     dispatch({ type: UPDATE_USER_BEGIN });
     try {
       const { data } = await authFetch.patch("/auth/updateUser", currentUser);
@@ -273,8 +277,7 @@ const AppProvider = ({ children }) => {
       await authFetch.delete(`/jobs/${jobId}`);
       getJobs();
     } catch (error) {
-      console.log(error.response);
-      // logoutUser()
+      logoutUser();
     }
   };
 
@@ -290,8 +293,7 @@ const AppProvider = ({ children }) => {
         },
       });
     } catch (error) {
-      console.log(error.response);
-      // logoutUser();
+      logoutUser();
     }
     setTimeout(() => {
       clearAlert();

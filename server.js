@@ -17,14 +17,6 @@ if (process.env.NODE_ENV !== "Production") {
 }
 app.use(express.json());
 
-// app.get("/api", (req, res) => {
-//   res.send({ msg: "Welcome!" });
-// });
-
-// app.get("/api/v1", (req, res) => {
-//   res.send({ msg: "Welcome!222" });
-// });
-
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", authenticateUser, jobRouter);
 
