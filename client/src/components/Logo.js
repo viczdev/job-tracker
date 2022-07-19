@@ -1,7 +1,10 @@
 import React from "react";
-import logo from "../assets/images/logo.svg";
-const Logo = () => {
-  return <img src={logo} alt="jobify" className="logo"></img>;
+import logo from "../assets/images/logo.png";
+const Logo = (props) => {
+  console.log(props);
+  return (
+    <img src={logo} alt="jobify" className="logo" width={props.width}></img>
+  );
 };
 
 export default Logo;

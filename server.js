@@ -9,6 +9,9 @@ import jobRouter from "./routes/jobsRoutes.js";
 import morgan from "morgan";
 import authenticateUser from "./middleware/auth.js";
 dotenv.config();
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import path from "path";
 
 const app = express();
 
@@ -17,8 +20,15 @@ if (process.env.NODE_ENV !== "Production") {
 }
 app.use(express.json());
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+app.use(express.static(path.resolve(__dirname, "./client/build")));
+
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", authenticateUser, jobRouter);
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+});
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);

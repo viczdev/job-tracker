@@ -67,7 +67,7 @@ const Register = () => {
   return (
     <Wrapper className="full-page">
       <form className="form" onSubmit={onSubmit}>
-        <Logo></Logo>
+        <Logo width="85%"></Logo>
         <h3>{values.isMember ? "Login" : "Register"}</h3>
         {showAlert && <Alert></Alert>}
 

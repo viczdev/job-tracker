@@ -28,7 +28,7 @@ function Landing() {
   return (
     <Wrapper>
       <nav>
-        <Logo />
+        <Logo width="25%" />
       </nav>
       <div className="container page">
         <div className="info">
