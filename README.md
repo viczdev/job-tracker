@@ -1,8 +1,8 @@
-# job-finder
+# job-tracker
 
 #### Track Your Job Search
 
-Project in Action - [Jobify](https://www.jobify.live/)
+[Job-Tracker](https://job-tracker-deploy.herokuapp.com/)
 
 #### Run The App Locally
 
@@ -10,7 +10,7 @@ Project in Action - [Jobify](https://www.jobify.live/)
 npm run install-dependencies
 ```
 
-- rename .env.temp to .env
+- add .env
 - setup values for - MONGO_URL, JWT_SECRET, JWT_LIFETIME
 
 ```sh
